@@ -8,19 +8,37 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.nexx.nexxassistant.nexxauthenticator.view.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="Welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            app:destination="@id/signUpFragment"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:enterAnim="@anim/slide_in_to_left"
+            app:popEnterAnim="@anim/slide_in_to_right"
+            app:popExitAnim="@anim/slide_out_to_right"
+            />
         <action
             android:id="@+id/action_welcomeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:enterAnim="@anim/slide_in_to_left"
+            app:popEnterAnim="@anim/slide_in_to_right"
+            app:popExitAnim="@anim/slide_out_to_right"
+            />
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:enterAnim="@anim/slide_in_to_left"
+            app:popEnterAnim="@anim/slide_in_to_right"
+            app:popExitAnim="@anim/slide_out_to_right"
+            />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.nexx.nexxassistant.nexxauthenticator.view.LoginFragment"
-        android:label="fragment_login"
+        android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
@@ -32,7 +50,7 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.nexx.nexxassistant.nexxauthenticator.view.SignUpFragment"
-        android:label="fragment_sign_up"
+        android:label="Sign Up"
         tools:layout="@layout/fragment_sign_up" >
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
@@ -41,11 +59,15 @@
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.nexx.nexxassistant.nexxauthenticator.view.ForgotPasswordFragment"
-        android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.nexx.nexxassistant.nexxauthenticator.view.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
 </navigation>

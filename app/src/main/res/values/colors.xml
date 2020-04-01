@@ -6,6 +6,6 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorGrey">#cfcfcf</color>
     <color name="fbColor">#3b5998</color>
-    <Color name="googleColor">#DB4437</Color>
+    <color name="googleColor">#DB4437</color>
     +
 </resources>
